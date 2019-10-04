@@ -8,25 +8,34 @@
       <th>Title</th>
       <th>Price</th>
       <th>Quantity</th>
-      <th>Line Total</th>
-      <th>Total {{orderTotal}}</th>
+      <th>Total</th>
+      <th>Manage Cart</th>
     </tr>
   </thead>
-  
+
   <tbody>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+    <tr *ngFor='let book of books; let e = index'>
+      <td>{{book.title}}</td>
+      <td>{{book.price | number | currency}}</td>
+      <td>{{book.qty}}</td>
+      <td>{{book.price * book.qty | number | currency}}</td>
+      <td>
+        <button (click)='deleteBook(e)' id='delete-btn'>Delete</button>
+      </td>
     </tr>
+    
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>Title: <input type='text' [(ngModel)]='defaultBook.title'></td>
+      <td>Price: <input type='number' [(ngModel)]='defaultBook.price' class='price-input'></td>
+      <td>Quantity: <input type='number' [(ngModel)]='defaultBook.qty' class='qty-input'></td>
+      <td>Line Total: {{defaultBook.price * defaultBook.qty | number | currency}}</td>
+      <td>
+        <button (click)='addBook()' id='add-btn'>Add</button>
+      </td>
     </tr>
   </tbody>
 </table>
+
+<h1>Total price: {{booksTotal() | number | currency}}</h1>
+
+<h1>Total books: {{booksCount()}}</h1>
