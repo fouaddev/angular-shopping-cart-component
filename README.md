@@ -1,10 +1,11 @@
 # ShoppingCart
 
+This is a shopping cart Angular component with features to manage cart items with an interactive UI. 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Make sure port: 4200 is not serving another app. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
