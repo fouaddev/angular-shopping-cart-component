@@ -1,0 +1,52 @@
+$table-color: rgb(240, 240, 240);
+$table-border: rgb(120, 210, 250);
+
+h1 {
+  text-align: center;
+}
+
+table {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 800px;
+  background-color: $table-color;
+  border: 3px solid $table-border;
+  border-collapse: collapse;
+
+  thead {
+    margin: 0;
+    padding: 0;
+    border: 3px solid $table-border;
+
+    th {
+      margin: 0;
+      padding: 10px;
+      border: 3px solid $table-border;
+    }
+  }
+
+  tbody {
+    margin: 0;
+    padding: 0;
+    border: 3px solid $table-border;
+
+    td {
+      margin: 0;
+      padding: 10px;
+      border: 3px solid $table-border;
+
+      .qty-input {
+        width: 20px!important;
+      }
+
+      .qty-price {
+        width: 60px;
+      }
+    }
+  }
+}
+
+h2 {
+  text-align: center;
+}

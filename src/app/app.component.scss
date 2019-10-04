@@ -1,0 +1,12 @@
+$container-color: rgb(230, 240, 250);
+
+#container {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: $container-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
